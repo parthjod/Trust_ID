@@ -197,12 +197,6 @@ Identity, credential status, and proof verification are designed to be independe
 
 ---
 
-## License
-
-The smart contracts in this repository are marked with the **MIT** SPDX license identifier.
-
----
-
 ## Project Summary
 
 TrustID brings together:
