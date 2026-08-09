@@ -169,6 +169,105 @@ flowchart TD
     VerifierUser[Verifier / Relying Party] --> Frontend
 ```
 
+## Getting Started
+
+###  Setup
+
+Make sure the following are installed:
+
+- Node.js `>= 20`
+- npm
+- Foundry
+- Noir / Nargo
+- Git
+
+Verify your installations:
+
+```bash
+node --version
+npm --version
+forge --version
+nargo --version
+
+```
+## Installation
+
+### Prerequisites
+
+Install the following before setting up TrustID:
+
+- **Git** — Repository management
+- **Node.js >= 20** — Frontend runtime
+- **npm** — Frontend dependencies
+- **Foundry** — Smart contract development and deployment
+- **Noir / Nargo** — Zero-knowledge circuit development
+- **MetaMask** — Wallet interaction
+
+Verify the installations:
+
+```bash
+git --version
+node --version
+npm --version
+forge --version
+nargo --version
+
+```
+
+## Run Instructions
+
+### 1. Start the Local Blockchain
+
+Open a terminal:
+
+```bash
+cd TID/contracts
+anvil
+
+```
+
+### 2. Deploy the Smart Contracts
+
+cd TID/contracts
+forge script script/Deploy.s.sol \
+  --broadcast \
+  --rpc-url http://127.0.0.1:8545 \
+  --private-key <ANVIL_PRIVATE_KEY>
+
+```
+## 3. Run the Frontend
+
+cd TID/frontend
+npm run dev
+
+```
+### 4. Run Noir Circuit Tests
+
+```
+cd TID/noir/circuits/age_proof
+nargo test
+
+
+```
+
+## Run Order
+
+```text
+
+Anvil
+  ↓
+Deploy Contracts
+  ↓
+Configure Contract Addresses
+  ↓
+Run Frontend
+  ↓
+Connect Wallet
+  ↓
+Create DID / Manage Credentials / Generate & Verify Proofs
+
+```
+
 ## Design
 
 ## Design Principles
