@@ -1,0 +1,8 @@
+[package]
+name = "age_proof"
+type = "bin"
+authors = ["TrustID"]
+compiler_version = ">=0.36.0"
+
+[dependencies]
+# std is included by default

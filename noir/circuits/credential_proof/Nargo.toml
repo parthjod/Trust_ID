@@ -1,0 +1,5 @@
+[package]
+name = "credential_proof"
+type = "bin"
+authors = ["TrustID"]
+compiler_version = ">=0.36.0"
